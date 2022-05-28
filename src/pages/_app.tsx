@@ -5,16 +5,20 @@ import type { AppProps } from 'next/app';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AnswersContext from '@contexts/AnswersContext';
 import { useState, useEffect, useContext } from 'react';
+import { useRouter } from 'next/router';
 
+import questionsData from '../../data/questions';
 function MyApp({ Component, pageProps }: AppProps) {
-  const [answers, setanswers] = useState({});
-  const [stage, setstage] = useState(0);
+  const [questions, setquestions] = useState(questionsData);
 
+  const [customerId, setcustomerId] = useState(-1);
+  const [stage, setstage] = useState(-1);
   const [stageClass, setstageClass] = useState({});
   const addStage = () => {
     // stageClass[stage] = animateStyle.disapperToLeft
     stageClass[stage + 1] = animateStyle.appearFromRight;
     setstage((prev) => prev + 1);
+    console.log({ stage }); //////////
   };
 
   const reduceStage = () => {
@@ -23,17 +27,18 @@ function MyApp({ Component, pageProps }: AppProps) {
     setstage((prev) => prev - 1);
   };
 
-  useEffect(() => {}, [answers]);
-
   const value = {
-    answers,
-    setanswers,
+    customerId,
+    setcustomerId,
 
     stageClass,
     stage,
     setstage,
     addStage,
     reduceStage,
+
+    questions,
+    setquestions,
   };
   return (
     <>

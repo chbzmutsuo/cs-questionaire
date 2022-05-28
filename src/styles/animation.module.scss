@@ -1,6 +1,6 @@
 .disapperToLeft {
 	animation-name: disapperToLeft; /*アニメーションの定義名*/
-	animation-duration: 0.7s; /*アニメーション変化時間 ※デフォルト*/
+	animation-duration: 0.5s; /*アニメーション変化時間 ※デフォルト*/
 	animation-fill-mode: forwards; /*アニメーションの開始と終了時の状態を指定*/
 	opacity: 0;
 }
@@ -22,7 +22,7 @@
 .apperFromLeft {
 	animation-name: apperFromLeft; /*アニメーションの定義名*/
 
-	animation-duration: 0.7s; /*アニメーション変化時間 ※デフォルト*/
+	animation-duration: 0.5s; /*アニメーション変化時間 ※デフォルト*/
 	animation-fill-mode: forwards; /*アニメーションの開始と終了時の状態を指定*/
 	opacity: 0;
 }
@@ -42,7 +42,7 @@
 
 .disapperToRight {
 	animation-name: disapperToRight; /*アニメーションの定義名*/
-	animation-duration: 0.7s; /*アニメーション変化時間 ※デフォルト*/
+	animation-duration: 0.5s; /*アニメーション変化時間 ※デフォルト*/
 	animation-fill-mode: forwards; /*アニメーションの開始と終了時の状態を指定*/
 	opacity: 0;
 }
@@ -63,7 +63,7 @@
 .appearFromRight {
 	animation-name: appearFromRight; /*アニメーションの定義名*/
 
-	animation-duration: 0.7s;
+	animation-duration: 0.5s;
 	animation-fill-mode: forwards; /*アニメーションの開始と終了時の状態を指定*/
 	opacity: 0;
 }
